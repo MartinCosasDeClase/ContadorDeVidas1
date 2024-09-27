@@ -41,7 +41,18 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //BOTONE P1----------------------------------------------------------
+
+        if (savedInstanceState != null){
+            vidaP1 = savedInstanceState.getInt("vidaP1")
+            vidaP2 = savedInstanceState.getInt("vidaP2")
+            venenoP1 = savedInstanceState.getInt("venenoP1")
+            venenoP2 = savedInstanceState.getInt("venenoP2")
+
+            actualizaVidaP1()
+            actualizaVidaP2()
+        }
+
+        //BOTONES P1----------------------------------------------------------
 
         binding.btnpvp1.setOnClickListener {
             vidaP1++;
@@ -59,6 +70,13 @@ class FirstFragment : Fragment() {
             venenoP1--
             actualizaVidaP1()
         }
+        binding.btnPasarVidaP1.setOnClickListener{
+            vidaP2--
+            vidaP1++
+            actualizaVidaP1()
+            actualizaVidaP2()
+        }
+
         //BOTONES P2 ------------------------------------------------
 
         binding.btnpvp2.setOnClickListener{
@@ -77,13 +95,28 @@ class FirstFragment : Fragment() {
             venenoP2--
             actualizaVidaP2()
         }
+        binding.btnPasaVidasP2.setOnClickListener{
+            vidaP2++
+            vidaP1--
+            actualizaVidaP1()
+            actualizaVidaP2()
+        }
 
+    }
+
+    public override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt("vidaP1", vidaP1)
+        outState.putInt("vidaP2",vidaP2)
+        outState.putInt("venenoP1",venenoP1)
+        outState.putInt("venenop2",venenoP2)
+
+        super.onSaveInstanceState(outState)
     }
 
     private fun actualizaVidaP1() {
-        binding.textView.setText("" + vidaP1 + "/" + venenoP1)
+        binding.textoP1.setText("" + vidaP1 + "/" + venenoP1)
     }
     private fun actualizaVidaP2(){
-        binding.textView2.setText(""+ vidaP2 + "/" + venenoP2)
+        binding.textoP2.setText(""+ vidaP2 + "/" + venenoP2)
     }
 }

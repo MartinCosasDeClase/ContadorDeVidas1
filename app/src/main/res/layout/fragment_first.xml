@@ -11,7 +11,7 @@
     app:layout_anchorGravity="center">
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btnPasaVidasP2"
         android:layout_width="397dp"
         android:layout_height="43dp"
         android:src="@android:drawable/arrow_down_float"
@@ -27,7 +27,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="24dp"
         android:text="P+"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@+id/btnPasarVidaP1"
         app:layout_constraintEnd_toStartOf="@+id/btnPmP1"
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +70,7 @@
         android:layout_width="90dp"
         android:layout_height="208dp"
         android:src="@drawable/baseline_favorite_24"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@+id/btnPasarVidaP1"
         app:layout_constraintEnd_toEndOf="@+id/btnPpP1"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/btnPpP1"
@@ -83,7 +83,7 @@
         android:layout_height="208dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/baseline_favorite_border_24"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@+id/btnPasarVidaP1"
         app:layout_constraintEnd_toEndOf="@+id/btnPmP1"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnPmP1"
@@ -100,7 +100,7 @@
         app:layout_constraintEnd_toEndOf="@+id/btnPpP2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnPpP2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/btnPasaVidasP2"
         app:layout_constraintVertical_bias="0.95" />
 
     <ImageButton
@@ -114,17 +114,17 @@
         app:layout_constraintEnd_toEndOf="@+id/btnPmP2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnPmP2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/btnPasaVidasP2"
         app:layout_constraintVertical_bias="0.954" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textoP1"
         android:layout_width="81dp"
         android:layout_height="49dp"
         android:text="20/0"
         android:textAlignment="center"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintBottom_toTopOf="@+id/btnPasarVidaP1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +132,7 @@
         app:layout_constraintVertical_bias="0.606" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textoP2"
         android:layout_width="87dp"
         android:layout_height="53dp"
         android:text="20/0"
@@ -142,11 +142,11 @@
         app:layout_constraintEnd_toStartOf="@+id/btnmvp2"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toEndOf="@+id/btnpvp2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/btnPasaVidasP2"
         app:layout_constraintVertical_bias="0.388" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btnPasarVidaP1"
         android:layout_width="397dp"
         android:layout_height="43dp"
         android:src="@android:drawable/arrow_up_float"
