@@ -13,10 +13,11 @@ import com.example.contadordevidas.databinding.FragmentFirstBinding
  */
 class FirstFragment : Fragment() {
 
-    private var vidaP1 = 20;
-    private var venenoP1 = 0;
-    private var vidaP2 = 20;
-    private var venenoP2 = 0;
+    var vidaP1 = 20;
+    var venenoP1 = 0;
+    var vidaP2 = 20;
+    var venenoP2 = 0;
+
 
     private var _binding: FragmentFirstBinding? = null
 
@@ -59,22 +60,28 @@ class FirstFragment : Fragment() {
             actualizaVidaP1()
         }
         binding.btnmvp1.setOnClickListener {
-            vidaP1--
-            actualizaVidaP1()
+            if(vidaP1 != 0) {
+                vidaP1--
+                actualizaVidaP1()
+            }
         }
         binding.btnPpP1.setOnClickListener {
             venenoP1++
             actualizaVidaP1()
         }
         binding.btnPmP1.setOnClickListener {
-            venenoP1--
-            actualizaVidaP1()
+            if(venenoP1 != 0) {
+                venenoP1--
+                actualizaVidaP1()
+            }
         }
         binding.btnPasarVidaP1.setOnClickListener{
-            vidaP2--
-            vidaP1++
-            actualizaVidaP1()
-            actualizaVidaP2()
+            if(vidaP2 != 0) {
+                vidaP2--
+                vidaP1++
+                actualizaVidaP1()
+                actualizaVidaP2()
+            }
         }
 
         //BOTONES P2 ------------------------------------------------
@@ -84,22 +91,28 @@ class FirstFragment : Fragment() {
             actualizaVidaP2()
         }
         binding.btnmvp2.setOnClickListener{
-            vidaP2--
-            actualizaVidaP2()
+            if (vidaP2 != 0) {
+                vidaP2--
+                actualizaVidaP2()
+            }
         }
         binding.btnPpP2.setOnClickListener{
             venenoP2++
             actualizaVidaP2()
         }
         binding.btnPmP2.setOnClickListener{
-            venenoP2--
-            actualizaVidaP2()
+            if(venenoP2 != 0) {
+                venenoP2--
+                actualizaVidaP2()
+            }
         }
         binding.btnPasaVidasP2.setOnClickListener{
-            vidaP2++
-            vidaP1--
-            actualizaVidaP1()
-            actualizaVidaP2()
+            if(vidaP1 != 0) {
+                vidaP2++
+                vidaP1--
+                actualizaVidaP1()
+                actualizaVidaP2()
+            }
         }
 
     }

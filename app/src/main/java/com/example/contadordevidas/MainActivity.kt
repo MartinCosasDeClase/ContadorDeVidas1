@@ -10,6 +10,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.TextView
 import android.widget.Toast
 import com.example.contadordevidas.databinding.ActivityMainBinding
 
@@ -54,11 +55,25 @@ class MainActivity : AppCompatActivity() {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+        resetGame(FirstFragment())
             return when (item.itemId) {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
 
+    }
+    private fun resetGame(F:FirstFragment):FirstFragment{
+        F.vidaP1 = 20
+        F.vidaP2 = 20
+        F.venenoP1 = 0
+        F.venenoP2 = 0
+        var txt1:TextView = findViewById(R.id.textoP1)
+        var txt2:TextView = findViewById(R.id.textoP2)
+
+        txt1.text = "" + F.vidaP1 + "/" + F.venenoP1
+        txt2.text = "" + F.vidaP2 + "/" + F.venenoP2
+
+        return F
     }
 
     override fun onSupportNavigateUp(): Boolean {
